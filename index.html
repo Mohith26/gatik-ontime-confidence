@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gatik | Live Operations · On-time confidence</title>
+<link rel="icon" href="assets/gatik-mark.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" aria-label="Gatik"><img src="assets/gatik-mark.svg" alt="Gatik"></a>
+  <div class="ticker">
+    <div class="ticker-tile"><img src="assets/gatik-wordmark.svg" alt="Gatik"><b>90%</b><span>ETA bands</span></div>
+    <div class="ticker-body">
+      <div class="ticker-date">Concept, November 2026</div>
+      <div class="ticker-title">On-time confidence for Live Operations</div>
+      <div class="ticker-text">Every stop gets a calibrated arrival window and every trip an on-time probability, from conformal prediction on the network's own history.</div>
+    </div>
+  </div>
+</header>
+
+<section class="live">
+  <div class="live-header">
+    <h2 class="title"><span class="title-inner">Live Operations<i class="status-indicator"></i></span><em id="board-date">-</em></h2>
+    <div class="header-time">
+      <div class="header-time-label">Central Standard Time (CST)</div>
+      <div class="header-time-value" id="board-sub">-</div>
+      <div class="board-ctl">
+        <button class="round" id="day-prev" aria-label="Previous day"><svg viewBox="0 0 12 12"><path d="M7.5 2.5 4 6l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+        <input type="range" id="board-time" min="300" max="1260" step="15" value="645" aria-label="Board time">
+        <button class="round" id="day-next" aria-label="Next day"><svg viewBox="0 0 12 12"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="table" id="table"></div>
+  <div class="load-more-wrapper"><button class="pill" id="load-more">Load more</button></div>
+</section>
+
+<section class="news">
+  <h2 class="news-title">On-time confidence</h2>
+  <div class="news-list" id="analysis"></div>
+</section>
+
+<div class="tooltip" id="tooltip" data-mode="hover">
+  <div class="tooltip-header" id="tt-header"></div>
+  <div class="tooltip-body"><ul id="tt-body"></ul></div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-claim">The business of<br><em>autonomous freight.</em></div>
+    <nav class="footer-nav"><a>About</a><a>Our Customers</a><a>Safety</a><a>News</a><a>Careers</a></nav>
+  </div>
+  <div class="footer-bottom">
+    <img class="footer-logo" src="assets/gatik-wordmark.svg" alt="Gatik">
+    <div class="footer-note">Unofficial concept demo by Mohith Gajjela. Not affiliated with Gatik. Synthetic data.<br><a href="https://github.com/Mohith26/gatik-ontime-confidence">Source and method</a></div>
+  </div>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
